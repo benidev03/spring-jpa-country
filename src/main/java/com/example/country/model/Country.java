@@ -27,11 +27,11 @@ public class Country {
 	@Column(name = "national_day")
 	private LocalDate nationalDay;
 	
-	@Column(name = "country_code2")
-	private char countryCode2;
+	@Column(name = "country_code2", unique = true)
+	private String countryCode2;
 	
-	@Column(name = "country_code3")
-	private char countryCode3;
+	@Column(name = "country_code3", unique = true)
+	private String countryCode3;
 	
 	
 	@ManyToOne
@@ -79,22 +79,22 @@ public class Country {
 	}
 
 
-	public char getCountryCode2() {
+	public String getCountryCode2() {
 		return countryCode2;
 	}
 
 
-	public void setCountryCode2(char countryCode2) {
+	public void setCountryCode2(String countryCode2) {
 		this.countryCode2 = countryCode2;
 	}
 
 
-	public char getCountryCode3() {
+	public String getCountryCode3() {
 		return countryCode3;
 	}
 
 
-	public void setCountryCode3(char countryCode3) {
+	public void setCountryCode3(String countryCode3) {
 		this.countryCode3 = countryCode3;
 	}
 
