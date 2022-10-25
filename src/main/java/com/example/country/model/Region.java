@@ -17,13 +17,13 @@ public class Region {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "region_id")
-	private Integer regionID;
+	private int regionID;
 	
 	private String name;
 	
 	
 	@ManyToOne
-	@JoinColumn(name = "coninent_id", nullable = false)
+	@JoinColumn(name = "continent_id", nullable = false)
 	private Continent continent;
 
 
